@@ -35,10 +35,10 @@ function beat() {
             n = i++%timeSig;
             console.log(n);
             if (n>0) {
-                var sound = new Audio("sounds/kick.mp3")
+                var sound = new Audio("kick.mp3")
                 sound.play()
             } else {
-                var sound = new Audio("sounds/snare.mp3")
+                var sound = new Audio("snare.mp3")
                 sound.play()
             }
         };
