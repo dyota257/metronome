@@ -2,6 +2,15 @@ var i = 0;
 var n = 0;
 var beatOn = false;
 var timeSig = document.getElementById("timeSig").value;
+var soundset = "drums";
+var arSoundSet = document.getElementsByName("sounds");
+
+for (var i=0; i<arSoundSet.length; i++) {
+    arSoundSet[i].addEventListener("click", function () {
+        soundset = this.value;
+        console.log(soundset);
+    })
+};
 
 document.querySelector("#play").addEventListener("click", function() {
     if(beatOn === false){
@@ -35,10 +44,10 @@ function beat() {
             n = i++%timeSig;
             console.log(n);
             if (n>0) {
-                var sound = new Audio("sounds/kick.mp3")
+                var sound = new Audio("sounds/"+soundset+"/time.mp3")
                 sound.play()
             } else {
-                var sound = new Audio("sounds/snare.mp3")
+                var sound = new Audio("sounds/"+soundset+"/beat.mp3")
                 sound.play()
             }
         };

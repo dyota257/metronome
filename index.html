@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metronome</title>
+    <title>Metrognome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/icons8-dwarf-50 (1).png" type="image/x-icon">
     <script defer  src="app.js"></script>
 
-
 </head>
 <body>
-    <div style="padding-top:30%">
+    <div>
+        <img src="images/icons8-dwarf-50 (1).png" width=50 height=50 >
+        <h1 class="display-4">Metrognome</h1>
+    </div>
 
-    </div>
     <div>
-        <input type="text" style="width:1.5rem;" id="bpm" value = "60">BPM
+        <input type="radio" name="sounds" id="sounds-drums" value="drums">
+        <label for="sounds">Drums</label>
+        <input type="radio" name="sounds" id="sounds-frogs" value="frogs">
+        <label for="sounds">Frogs</label>
     </div>
+
     <div>
-        <button id = "play">▶</button>
+        <input type="text" style="width:2rem;" id="bpm" value = "60">BPM
+    </div>
+
+    <div>
+        <button class = "btn btn-success" id = "play">▶</button>
         <!-- <button id = "pause">⏸</button> -->
     </div>
+
     <div>
         Time Signature
-        
     </div>
+
     <div>
         <input type="text" style="width:1.5rem" id="timeSig" value = "4">/4
     </div>
